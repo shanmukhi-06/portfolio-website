@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanmukhi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Background Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">S<span class="logo-dot">.</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#connect" class="nav-link">Connect</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#connect" class="btn-primary">Let's Talk</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#achievements" class="mobile-link">Achievements</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#blog" class="mobile-link">Blog</a></li>
+            <li><a href="#connect" class="mobile-link">Connect</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Available for Opportunities</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="line">Hi, I'm</span>
+                <span class="line name-gradient">Shanmukhi</span>
+                <span class="line subtitle-line">
+                    <span id="typewriter"></span><span class="cursor-blink">|</span>
+                </span>
+            </h1>
+            <p class="hero-description">
+                B.Tech Data Science student at Mohan Babu University · Cloud Computing enthusiast · 
+                AI/ML explorer · Creative Designer · AWS Student Builder Lead
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary btn-glow">View My Work</a>
+                <a href="#about" class="btn-outline">About Me</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num" data-target="2">0</span>+
+                    <span class="stat-label">Hackathon Wins</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num" data-target="5">0</span>+
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num" data-target="3">0</span>+
+                    <span class="stat-label">Projects Built</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3D Glass Sculpture -->
+        <div class="hero-3d" id="hero3d">
+            <canvas id="sculptureCanvas"></canvas>
+            <div class="glow-ring ring1"></div>
+            <div class="glow-ring ring2"></div>
+            <div class="glow-ring ring3"></div>
+            <div class="floating-chips">
+                <div class="chip chip1"><i class="fab fa-aws"></i> AWS</div>
+                <div class="chip chip2"><i class="fab fa-google"></i> Google AI</div>
+                <div class="chip chip3"><i class="fas fa-brain"></i> AI/ML</div>
+                <div class="chip chip4"><i class="fas fa-cloud"></i> Cloud</div>
+                <div class="chip chip5"><i class="fas fa-database"></i> Data Science</div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="section-header">
+            <span class="section-tag">Who I Am</span>
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-visual">
+                <div class="about-card-3d" id="aboutCard">
+                    <div class="profile-frame">
+                        <div class="profile-initials">S</div>
+                        <div class="profile-ring"></div>
+                        <div class="profile-ring ring-2"></div>
+                    </div>
+                    <div class="about-floating-badge badge-1">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>B.Tech DS</span>
+                    </div>
+                    <div class="about-floating-badge badge-2">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS Lead</span>
+                    </div>
+                    <div class="about-floating-badge badge-3">
+                        <i class="fas fa-trophy"></i>
+                        <span>1st Prize</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h3 class="about-heading">A passionate <span class="gradient-text">Data Science</span> student shaping the future with AI & Cloud</h3>
+                <p class="about-text">
+                    I'm Shanmukhi, a 3rd-year B.Tech student specializing in Data Science at 
+                    Mohan Babu University. I'm on a mission to bridge the gap between data, 
+                    artificial intelligence, and real-world impact.
+                </p>
+                <p class="about-text">
+                    As the Planning & Management Lead at the AWS Student Builder Group, 
+                    I thrive at the intersection of leadership and technology. I love exploring 
+                    cloud computing, building AI-powered solutions, and designing beautiful, 
+                    intuitive digital experiences.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mohan Babu University, AP</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>B.Tech Data Science (2nd → 3rd Year)</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-star"></i>
+                        <span>AI · Cloud · Design · Leadership</span>
+                    </div>
+                </div>
+                <a href="#connect" class="btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-padding">
+        <div class="section-header">
+            <span class="section-tag">What I Know</span>
+            <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category glass-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI & Machine Learning</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar-item">
+                        <span>Generative AI</span>
+                        <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Machine Learning</span>
+                        <div class="bar"><div class="bar-fill" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Data Analysis</span>
+                        <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category glass-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud Computing</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar-item">
+                        <span>AWS Services</span>
+                        <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Google Cloud</span>
+                        <div class="bar"><div class="bar-fill" data-width="78"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Cloud Architecture</span>
+                        <div class="bar"><div class="bar-fill" data-width="70"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category glass-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>Programming</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar-item">
+                        <span>Python</span>
+                        <div class="bar"><div class="bar-fill" data-width="82"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>SQL</span>
+                        <div class="bar"><div class="bar-fill" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Web Development</span>
+                        <div class="bar"><div class="bar-fill" data-width="70"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category glass-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                <h3>Design & Creative</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar-item">
+                        <span>UI/UX Design</span>
+                        <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Figma</span>
+                        <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Visual Storytelling</span>
+                        <div class="bar"><div class="bar-fill" data-width="88"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category glass-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-users"></i></div>
+                <h3>Leadership & Management</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar-item">
+                        <span>Team Leadership</span>
+                        <div class="bar"><div class="bar-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Project Planning</span>
+                        <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Event Management</span>
+                        <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category glass-card" data-tilt>
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <h3>Data Science</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar-item">
+                        <span>Data Visualization</span>
+                        <div class="bar"><div class="bar-fill" data-width="78"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Statistical Analysis</span>
+                        <div class="bar"><div class="bar-fill" data-width="72"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <span>Deep Learning</span>
+                        <div class="bar"><div class="bar-fill" data-width="65"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Pills -->
+        <div class="tech-stack">
+            <h3>Tech Stack</h3>
+            <div class="tech-pills">
+                <span class="pill"><i class="fab fa-python"></i> Python</span>
+                <span class="pill"><i class="fab fa-aws"></i> AWS</span>
+                <span class="pill"><i class="fab fa-google"></i> Google Cloud</span>
+                <span class="pill"><i class="fas fa-fire"></i> TensorFlow</span>
+                <span class="pill"><i class="fas fa-chart-bar"></i> Pandas</span>
+                <span class="pill"><i class="fas fa-brain"></i> Generative AI</span>
+                <span class="pill"><i class="fas fa-database"></i> SQL</span>
+                <span class="pill"><i class="fab fa-figma"></i> Figma</span>
+                <span class="pill"><i class="fab fa-html5"></i> HTML/CSS</span>
+                <span class="pill"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="pill"><i class="fas fa-robot"></i> LLMs</span>
+                <span class="pill"><i class="fas fa-cloud"></i> Vertex AI</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section-padding">
+        <div class="section-header">
+            <span class="section-tag">Milestones</span>
+            <h2 class="section-title">My <span class="gradient-text">Achievements</span></h2>
+        </div>
+        <div class="achievements-grid">
+            <div class="achievement-card featured glass-card" data-tilt>
+                <div class="achievement-glow"></div>
+                <div class="achievement-rank">🥇</div>
+                <div class="achievement-content">
+                    <span class="achievement-tag">1st Prize</span>
+                    <h3>Vertex AI Hackathon</h3>
+                    <p>Won first place at the college-level Vertex AI hackathon, showcasing innovative use of Google Cloud's AI platform to solve real-world problems.</p>
+                    <div class="achievement-meta">
+                        <span><i class="fas fa-university"></i> Mohan Babu University</span>
+                        <span><i class="fas fa-trophy"></i> Winner</span>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card glass-card" data-tilt>
+                <div class="achievement-rank">🥈</div>
+                <div class="achievement-content">
+                    <span class="achievement-tag">2nd Prize</span>
+                    <h3>Techno Fest – Paper Presentation</h3>
+                    <p>Secured second prize at the paper presentation event at Sri Venkateswara College of Engineering and Technology's annual Techno Fest.</p>
+                    <div class="achievement-meta">
+                        <span><i class="fas fa-university"></i> SVCET</span>
+                        <span><i class="fas fa-medal"></i> Runner Up</span>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card glass-card" data-tilt>
+                <div class="achievement-rank">🚀</div>
+                <div class="achievement-content">
+                    <span class="achievement-tag">Leadership Role</span>
+                    <h3>AWS Student Builder Group Lead</h3>
+                    <p>Serving as Planning & Management Lead at the AWS Student Builder Group at Mohan Babu University, driving cloud initiatives and workshops.</p>
+                    <div class="achievement-meta">
+                        <span><i class="fab fa-aws"></i> Amazon Web Services</span>
+                        <span><i class="fas fa-users"></i> Team Lead</span>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card glass-card" data-tilt>
+                <div class="achievement-rank">🎓</div>
+                <div class="achievement-content">
+                    <span class="achievement-tag">Certification</span>
+                    <h3>Generative AI – Google Cloud</h3>
+                    <p>Completed the Generative AI learning path on Google Cloud, gaining hands-on expertise with foundation models, prompt engineering, and AI tools.</p>
+                    <div class="achievement-meta">
+                        <span><i class="fab fa-google"></i> Google Cloud</span>
+                        <span><i class="fas fa-certificate"></i> Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <h3 class="timeline-title">My Journey</h3>
+            <div class="timeline-track">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-year">2022</span>
+                        <h4>Started B.Tech</h4>
+                        <p>Joined Mohan Babu University, Data Science specialisation</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-year">2023</span>
+                        <h4>AWS Student Builder Lead</h4>
+                        <p>Took on Planning & Management Lead role</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-year">2024</span>
+                        <h4>Vertex AI Hackathon 🥇</h4>
+                        <p>Won first prize at college hackathon</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-year">2024</span>
+                        <h4>Google Gen AI Certified</h4>
+                        <p>Completed Generative AI path on Google Cloud</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-card glass-card active">
+                        <span class="timeline-year">2025</span>
+                        <h4>3rd Year & Beyond 🚀</h4>
+                        <p>Deepening AI/ML expertise & exploring cloud specialisations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding">
+        <div class="section-header">
+            <span class="section-tag">What I've Built</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card glass-card" data-tilt>
+                <div class="project-image">
+                    <div class="project-mockup ai-mockup">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Vertex AI</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">GCP</span>
+                    </div>
+                    <h3>Vertex AI Hackathon Project</h3>
+                    <p>Award-winning project built during the Vertex AI hackathon. Leveraged Google Cloud's AI platform to deliver a real-world solution using generative AI capabilities.</p>
+                </div>
+            </div>
+            <div class="project-card glass-card" data-tilt>
+                <div class="project-image">
+                    <div class="project-mockup cloud-mockup">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Cloud</span>
+                        <span class="tag">Architecture</span>
+                    </div>
+                    <h3>AWS Cloud Solution</h3>
+                    <p>Designed and deployed a scalable cloud architecture using AWS services as part of the Student Builder Group initiatives, improving workflow efficiency.</p>
+                </div>
+            </div>
+            <div class="project-card glass-card" data-tilt>
+                <div class="project-image">
+                    <div class="project-mockup data-mockup">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">ML</span>
+                    </div>
+                    <h3>Data Science Analysis</h3>
+                    <p>Comprehensive data analysis and machine learning model for predictive analytics, using Python, pandas, and scikit-learn with interactive visualisations.</p>
+                </div>
+            </div>
+            <div class="project-card glass-card coming-soon" data-tilt>
+                <div class="project-image">
+                    <div class="project-mockup design-mockup">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Coming Soon</span>
+                    </div>
+                    <h3>Next Big Project 🔥</h3>
+                    <p>Something exciting is brewing... Stay tuned for my next venture into AI-powered applications and cloud-native solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog section-padding">
+        <div class="section-header">
+            <span class="section-tag">My Thoughts</span>
+            <h2 class="section-title">Latest <span class="gradient-text">Blog</span></h2>
+            <p class="section-subtitle">Ideas, insights, and learnings from my journey in tech</p>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card glass-card featured-blog">
+                <div class="blog-image">
+                    <div class="blog-mockup gradient-1">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <span class="blog-category">Artificial Intelligence</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Coming Soon</span>
+                        <span><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                    <h3>The Future of Generative AI: What I Learned from Google Cloud</h3>
+                    <p>My deep dive into generative AI after completing Google Cloud's learning path — from foundation models to real-world applications.</p>
+                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card glass-card">
+                <div class="blog-image">
+                    <div class="blog-mockup gradient-2">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <span class="blog-category">Cloud Computing</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Coming Soon</span>
+                        <span><i class="far fa-clock"></i> 4 min read</span>
+                    </div>
+                    <h3>Getting Started with AWS as a Student</h3>
+                    <p>Tips and resources for students diving into Amazon Web Services — from free tier to real projects.</p>
+                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="blog-card glass-card">
+                <div class="blog-image">
+                    <div class="blog-mockup gradient-3">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <span class="blog-category">Hackathon</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Coming Soon</span>
+                        <span><i class="far fa-clock"></i> 6 min read</span>
+                    </div>
+                    <h3>How We Won the Vertex AI Hackathon</h3>
+                    <p>The story behind our first-place finish — the idea, the team, the all-nighters, and the lessons learned.</p>
+                    <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="blog-cta">
+            <p>More articles coming soon — I'm just getting started ✍️</p>
+            <a href="#connect" class="btn-outline">Get Notified</a>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="connect section-padding">
+        <div class="section-header">
+            <span class="section-tag">Let's Grow Together</span>
+            <h2 class="section-title">Connect & <span class="gradient-text">Collaborate</span></h2>
+            <p class="section-subtitle">I'm always open to new ideas, collaborations, and conversations that help us both grow</p>
+        </div>
+
+        <div class="connect-grid">
+            <!-- Connection Cards -->
+            <div class="connect-cards">
+                <div class="connect-card glass-card" data-tilt>
+                    <div class="connect-icon"><i class="fab fa-linkedin"></i></div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect professionally and follow my career journey</p>
+                    <a href="https://linkedin.com" target="_blank" class="connect-btn">Connect <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="connect-card glass-card" data-tilt>
+                    <div class="connect-icon"><i class="fab fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>Explore my code, projects, and open source contributions</p>
+                    <a href="https://github.com" target="_blank" class="connect-btn">Follow <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="connect-card glass-card" data-tilt>
+                    <div class="connect-icon"><i class="fab fa-twitter"></i></div>
+                    <h3>Twitter / X</h3>
+                    <p>Follow my thoughts on AI, cloud, and tech trends</p>
+                    <a href="https://twitter.com" target="_blank" class="connect-btn">Follow <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="connect-card glass-card" data-tilt>
+                    <div class="connect-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>Reach out for collaborations, mentorship, or just a chat</p>
+                    <a href="mailto:shanmukhi@example.com" class="connect-btn">Email Me <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrap glass-card">
+                <h3>Send Me a Message</h3>
+                <p>Whether it's a project idea, a question, or just saying hi — I'd love to hear from you!</p>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Collaboration / Project / Just saying hi...">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Tell me about your idea, project, or anything on your mind..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full btn-glow">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Community Banner -->
+        <div class="community-banner glass-card">
+            <div class="community-content">
+                <h3>🌐 Join My Learning Circle</h3>
+                <p>I'm building a community of curious minds who love tech, AI, and creative thinking. Let's learn, share, and grow together.</p>
+            </div>
+            <a href="mailto:shanmukhi@example.com" class="btn-primary">Join the Community</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">S<span class="logo-dot">.</span></span>
+                <p>Shanmukhi · Data Science · AI · Cloud · Design</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a>
+                <a href="#connect">Connect</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Shanmukhi. Crafted with <span class="heart">♥</span> & lots of ☕</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
